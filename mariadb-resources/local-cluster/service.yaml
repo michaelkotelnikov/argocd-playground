@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: mariadb
-  name: mariadb
+  name: mikla
   namespace: nikita-gitops
 spec:
   ports:
