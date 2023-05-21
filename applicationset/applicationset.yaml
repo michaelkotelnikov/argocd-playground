@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: mariadb-appset
+  namespace: nikita-gitops
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/michaelkotelnikov/argocd-playground
+      revision: master
+      directories:
+      - path: mariadb-resources/*
+  template:
+    metadata:
+      name: 'mariadb-{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/michaelkotelnikov/argocd-playground.git
+        targetRevision: master
+        path: 'mariadb-resources/{{path.basename}}'
+      destination:
+        name: '{{path.basename}}'
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
