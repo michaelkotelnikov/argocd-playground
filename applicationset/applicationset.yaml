@@ -22,6 +22,7 @@ spec:
         path: 'mariadb-resources/{{path.basename}}'
       destination:
         name: '{{path.basename}}'
+        namespace: 'nikita-gitops'
       syncPolicy:
         automated:
           prune: false
