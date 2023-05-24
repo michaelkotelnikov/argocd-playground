@@ -15,7 +15,7 @@ spec:
       name: 'mariadb-{{path.basename}}'
       namespace: nikita-gitops
     spec:
-      project: 'michael'
+      project: michael
       source:
         repoURL: https://github.com/michaelkotelnikov/argocd-playground.git
         targetRevision: master
