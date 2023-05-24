@@ -13,6 +13,7 @@ spec:
   template:
     metadata:
       name: 'mariadb-{{path.basename}}'
+      namespace: nikita-gitops
     spec:
       project: michael
       source:
