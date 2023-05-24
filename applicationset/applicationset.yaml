@@ -14,7 +14,7 @@ spec:
     metadata:
       name: 'mariadb-{{path.basename}}'
     spec:
-      project: default
+      project: michael
       source:
         repoURL: https://github.com/michaelkotelnikov/argocd-playground.git
         targetRevision: master
