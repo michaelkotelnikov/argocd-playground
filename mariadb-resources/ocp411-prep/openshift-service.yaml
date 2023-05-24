@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    prometheus: openshift-apiserver
+  name: api
+  namespace: openshift-apiserver
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 84435
+  selector:
+    apiserver: "true"
+  sessionAffinity: None
+  type: ClusterIP
