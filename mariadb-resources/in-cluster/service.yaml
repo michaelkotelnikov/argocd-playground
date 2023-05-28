@@ -4,7 +4,7 @@ metadata:
   labels:
     app: mariadb
   name: mikla-bimbam
-  namespace: nikita-gitops
+  namespace: ebutz
 spec:
   ports:
   - name: 3306-tcp

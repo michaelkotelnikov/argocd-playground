@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: mariadb-appset
-  namespace: nikita-gitops
+  namespace: ebutz
 spec:
   generators:
   - git:
@@ -13,16 +13,16 @@ spec:
   template:
     metadata:
       name: 'mariadb-{{path.basename}}'
-      namespace: nikita-gitops
+      namespace: ebutz
     spec:
-      project: michael
+      project: ebutz
       source:
         repoURL: https://github.com/michaelkotelnikov/argocd-playground.git
         targetRevision: master
         path: 'mariadb-resources/{{path.basename}}'
       destination:
         name: '{{path.basename}}'
-        namespace: 'nikita-gitops'
+        namespace: 'ebutz'
       syncPolicy:
         automated:
           prune: false

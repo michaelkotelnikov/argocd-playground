@@ -27,4 +27,4 @@ metadata:
     app.kubernetes.io/name: argocd-ca
     app.kubernetes.io/part-of: argocd
   name: argocd-ca
-  namespace: nikita-gitops
+  namespace: ebutz
