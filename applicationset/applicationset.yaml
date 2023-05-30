@@ -15,7 +15,7 @@ spec:
       name: 'mariadb-{{path.basename}}'
       namespace: ebutz
     spec:
-      project: ebutz
+      project: default
       source:
         repoURL: https://github.com/michaelkotelnikov/argocd-playground.git
         targetRevision: master
