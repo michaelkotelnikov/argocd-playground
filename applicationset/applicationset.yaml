@@ -22,7 +22,6 @@ spec:
         path: 'mariadb-resources/{{path.basename}}'
       destination:
         name: '{{path.basename}}'
-        namespace: 'ebutz'
       syncPolicy:
         automated:
           prune: false
